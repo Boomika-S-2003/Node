@@ -26,18 +26,38 @@ const index=http.createServer()
 
 // } )
 
+// fs.unlink('data.txt',(err)=>{
+//     if(err){
+//         console.log(err);    
+//     }
+//     else{
+//         console.log('sucesfully deleted');
+        
+//     }
+// })
 
-fs.appendFile('data2.txt','this is modified text',(err)=>{
+
+// fs.appendFile('data2.txt','this is modified text',(err)=>{
+//     if(err){
+//         console.log(err);
+        
+//     }
+//     else{
+//         console.log('modified succesfully');
+        
+//     }
+// })
+
+fs.rename('data2.txt','mydata.txt',(err)=>{
     if(err){
         console.log(err);
-        
-    }
-    else{
-        console.log('modified succesfully');
-        
-    }
-})
-
+           }
+           else{
+            console.log('renamed sucessfull');
+            
+           }
+        }
+)
 
 index.listen(5000,()=>{
     console.log("successfull set");
